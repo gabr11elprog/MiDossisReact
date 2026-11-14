@@ -1,0 +1,197 @@
+/*=========================================
+  TARJETA PRINCIPAL
+=========================================*/
+
+.tarjeta-medicamento {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  box-shadow: 0 5px 18px rgba(0,0,0,.10);
+
+  animation: aparecerTarjeta .35s ease;
+}
+
+/*=========================================
+  ICONO DEL MEDICAMENTO
+=========================================*/
+
+.tarjeta-icono {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #dceaff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+}
+
+/*=========================================
+  CONTENEDOR DE LOS DATOS
+=========================================*/
+
+.tarjeta-detalles {
+  flex: 1;
+  min-width: 0;
+}
+
+/*=========================================
+  NOMBRE DEL MEDICAMENTO
+=========================================*/
+
+.tarjeta-nombre {
+  color: #1565d8;
+  font-size: 21px;
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+}
+
+/*=========================================
+  INFORMACIÓN GENERAL
+=========================================*/
+
+.tarjeta-detalles p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/*=========================================
+  HORA PROGRAMADA
+=========================================*/
+
+.tarjeta-hora {
+  display: inline-block;
+
+  margin-top: 10px;
+  padding: 7px 12px;
+
+  border: 1px solid #dadada;
+  border-radius: 8px;
+
+  background: #f5f8ff;
+
+  font-size: 14px;
+}
+
+/*=========================================
+  ESTADO DEL MEDICAMENTO
+=========================================*/
+
+.tarjeta-estado {
+  display: table;
+
+  margin-top: 12px;
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ESTADO PENDIENTE */
+
+.tarjeta-estado.pendiente {
+  background: #fff0d5;
+  color: #a76500;
+}
+
+/* ESTADO TOMADO */
+
+.tarjeta-estado.tomado {
+  background: #d9f5df;
+  color: #18852d;
+}
+
+/*=========================================
+  BOTÓN MARCAR COMO TOMADO
+=========================================*/
+
+.tarjeta-btn-tomado {
+  display: block;
+  width: 100%;
+
+  margin-top: 12px;
+  padding: 11px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2eb54b;
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+/* EFECTO DEL BOTÓN */
+
+.tarjeta-btn-tomado:hover:not(:disabled) {
+  background: #25973d;
+}
+
+/* BOTÓN DESACTIVADO */
+
+.tarjeta-btn-tomado:disabled {
+  background: #a5cfae;
+  cursor: default;
+}
+
+/*=========================================
+  BOTÓN DE OPCIONES
+=========================================*/
+
+.tarjeta-opciones {
+  background: none;
+  border: none;
+
+  font-size: 24px;
+  color: #444;
+
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/*=========================================
+  ANIMACIÓN DE APARICIÓN
+=========================================*/
+
+@keyframes aparecerTarjeta {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*=========================================
+  ADAPTACIÓN A CELULARES
+=========================================*/
+
+@media (max-width: 480px) {
+
+  .tarjeta-nombre {
+    font-size: 19px;
+  }
+
+}

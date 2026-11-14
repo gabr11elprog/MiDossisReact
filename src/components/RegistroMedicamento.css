@@ -1,0 +1,53 @@
+.form-registro {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.grupo-registro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grupo-registro label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.grupo-registro input,
+.grupo-registro select {
+  width: 100%;
+  height: 46px;
+  padding: 0 12px;
+  border: 1px solid #d8dce4;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.grupo-registro input:focus,
+.grupo-registro select:focus {
+  border-color: #1565d8;
+  box-shadow: 0 0 0 2px rgba(21,101,216,.10);
+}
+
+.btn-guardar-registro {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: #2eb54b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-guardar-registro:hover {
+  background: #25973d;
+}
